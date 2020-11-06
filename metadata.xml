@@ -79,8 +79,12 @@
                     <End EntitySet="Suppliers" Role="Supplier"/>
                     <End EntitySet="Products" Role="Product"/>
                 </AssociationSet>
+                <EntitySet EntityType="ProductModel.Order" Name="Orders"/>
+                <AssociationSet Association="ProductModel.FK_Product_Order" Name="SO_TO_Orders_AssocSet">
+                    <End EntitySet="Products" Role="Product"/>
+                    <End EntitySet="Orders" Role="Order"/>
+                </AssociationSet>
             </EntityContainer>
         </Schema>
-
     </edmx:DataServices>
 </edmx:Edmx>
