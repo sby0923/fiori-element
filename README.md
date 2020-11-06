@@ -7,3 +7,5 @@ This is a pull request demo
 To update email address
 
 To update user name 
+
+Update for local user email
