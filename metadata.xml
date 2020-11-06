@@ -34,7 +34,7 @@
                 <Property Name="UnitsInStock" Type="Edm.Int16"/>
                 <Property Name="UnitsOnStock" Type="Edm.Int16"/>
                 <Property Name="Discontinued" Type="Edm.Boolean"/>
-                <NavigationProperty FromRole="Product" Name="Order" Relationship="SupplierModel.FK_Product_Order" ToRole="Order"/>
+                <NavigationProperty FromRole="Product" Name="Order" Relationship="ProductModel.FK_Product_Order" ToRole="Order"/>
             </EntityType>
             <EntityType Name="Order">
                 <Key>
@@ -55,6 +55,18 @@
                         <PropertyRef Name="Id"/>
                     </Principal>
                     <Dependent Role="Product">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="FK_Product_Order">
+                <End Multiplicity="0..1" Role="Product" Type="ProductModel.FK_Product_Order"/>
+                <End Multiplicity="*" Role="Order" Type="ProductModel.Order"/>
+                <ReferentialConstraint>
+                    <Principal Role="Product">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="Order">
                         <PropertyRef Name="Id"/>
                     </Dependent>
                 </ReferentialConstraint>
