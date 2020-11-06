@@ -22,6 +22,10 @@
                 <Property Name="Website" Type="Edm.String" MaxLength="Max"/>
 
             </EntityType>
+            <EntityContainer Name="SupplierEntities" m:IsDefaultEntityContainer="true"
+                xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+                <EntitySet EntityType="SupplierModel.Supplier" Name="Suppliers"/>
+            </EntityContainer>
         </Schema>
 
     </edmx:DataServices>
