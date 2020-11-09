@@ -20,7 +20,7 @@
                 <Property Name="Country" Type="Edm.String" MaxLength="15"/>
                 <Property Name="Phone" Type="Edm.String" MaxLength="24"/>
                 <Property Name="Website" Type="Edm.String" MaxLength="Max"/>
-                <NavigationProperty FromRole="Supplier" Name="Product" Relationship="SupplierModel.FK_Supplier_Product" ToRole="Product"/>
+                <NavigationProperty FromRole="Supplier" Name="Product" Relationship="SalesModel.FK_Supplier_Product" ToRole="Product"/>
             </EntityType>
             <EntityType Name="Product">
                 <Key>
@@ -34,7 +34,7 @@
                 <Property Name="UnitsInStock" Type="Edm.Int16"/>
                 <Property Name="UnitsOnStock" Type="Edm.Int16"/>
                 <Property Name="Discontinued" Type="Edm.Boolean"/>
-                <NavigationProperty FromRole="Product" Name="Order" Relationship="ProductModel.FK_Product_Order" ToRole="Order"/>
+                <NavigationProperty FromRole="Product" Name="Order" Relationship="SalesModel.FK_Product_Order" ToRole="Order"/>
             </EntityType>
             <EntityType Name="Order">
                 <Key>
@@ -48,8 +48,8 @@
                 <Property Name="ShipVia" Type="Edm.String" MaxLength="15"/>
             </EntityType>
             <Association Name="FK_Supplier_Product">
-                <End Multiplicity="0..1" Role="Supplier" Type="SupplierModel.FK_Supplier_Product"/>
-                <End Multiplicity="*" Role="Product" Type="SupplierModel.Product"/>
+                <End Multiplicity="0..1" Role="Supplier" Type="SalesModel.FK_Supplier_Product"/>
+                <End Multiplicity="*" Role="Product" Type="SalesModel.Product"/>
                 <ReferentialConstraint>
                     <Principal Role="Supplier">
                         <PropertyRef Name="Id"/>
@@ -60,8 +60,8 @@
                 </ReferentialConstraint>
             </Association>
             <Association Name="FK_Product_Order">
-                <End Multiplicity="0..1" Role="Product" Type="ProductModel.FK_Product_Order"/>
-                <End Multiplicity="*" Role="Order" Type="ProductModel.Order"/>
+                <End Multiplicity="0..1" Role="Product" Type="SalesModel.FK_Product_Order"/>
+                <End Multiplicity="*" Role="Order" Type="SalesModel.Order"/>
                 <ReferentialConstraint>
                     <Principal Role="Product">
                         <PropertyRef Name="Id"/>
