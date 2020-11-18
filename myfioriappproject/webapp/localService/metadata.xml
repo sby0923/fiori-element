@@ -31,7 +31,8 @@
                 <Property Name="PostalCode" Type="Edm.String" MaxLength="10"/>
                 <Property Name="Country" Type="Edm.String" MaxLength="15"/>
                 <Property Name="Phone" Type="Edm.String" MaxLength="24"/>
-                <Property Name="Website" Type="Edm.String" MaxLength="Max"/>
+                <Property Name="Website" Type="Edm.String" MaxLength="50"/>
+                <Property Name="CountryId" Type="Edm.String" MaxLength="5"/>
                 <NavigationProperty Name="ToProducts" Relationship="SalesModel.FK_Supplier_Product" FromRole="Supplier" ToRole="Product"/>
             </EntityType>
             <EntityType Name="Product">
