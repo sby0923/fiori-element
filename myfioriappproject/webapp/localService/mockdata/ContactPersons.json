@@ -5,7 +5,7 @@
         "Title": "Purchasing Manager",
         "Email": "charlotte@gmail.com",
         "Phone": "0171234567",
-        "ImagePath": "../../images/contactPerson/person101.jpg",
+        "ImagePath": "../../images/contactPerson/person101.png",
         "__metadata": {
             "uri": "ContactPersons(101)",
             "type": "SalesModel.ContactPersons"
