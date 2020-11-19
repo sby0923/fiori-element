@@ -283,7 +283,7 @@
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Capabilities.UpdateRestrictions">
                     <Record Type="Capabilities.UpdateRestrictionsType">
-                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="Updatable" Bool="true"/>
                     </Record>
                 </Annotation>
             </Annotations>
@@ -313,6 +313,7 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
             </Annotations>
             <Annotations Target="SalesModel.Supplier/Website"
@@ -487,12 +488,14 @@
             </Annotations>
             <Annotations Target="SalesModel.SalesEntities/Orders"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
+
                 <Annotation Term="Capabilities.InsertRestrictions">
                     <Record Type="Capabilities.InsertRestrictionsType">
                         <PropertyValue Property="Insertable" Bool="false"/>
                     </Record>
                 </Annotation>
             </Annotations>
+
             <Annotations Target="SalesModel.SalesEntities/Orders"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Capabilities.UpdateRestrictions">
@@ -501,6 +504,7 @@
                     </Record>
                 </Annotation>
             </Annotations>
+
             <Annotations Target="SalesModel.SalesEntities/Orders"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Capabilities.DeleteRestrictions">
